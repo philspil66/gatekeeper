@@ -37,7 +37,7 @@ Gatekeeper\Provider\FeatureServiceProvider::class,
 ...
 ```
 
-Now you have to **run migrations**, to add the tables Laravel-Feature needs.
+Now you have to **run migrations**, to add the tables Gatekeeper needs.
 
 ```bash
 $ php artisan migrate
@@ -59,7 +59,7 @@ If you don't like Facades, **inject the `FeatureManager`** class wherever you wa
 
 ### Config File
 
-By default, you can immediately use Laravel-Gatekeeper. However, if you want to tweak some settings, feel free to **publish the config file** with
+By default, you can immediately use Gatekeeper. However, if you want to tweak some settings, feel free to **publish the config file** with
 
 ```bash
 $ php artisan vendor:publish --provider="Gatekeeper\Provider\FeatureServiceProvider"
@@ -103,7 +103,7 @@ class CMSController extends Controller {
 }
 ```
 
-Now, we want to deploy the new service, but **we don't want to make it available for users**, because the marketing team asked us to release it the next week. LaravelFeature helps us with this:
+Now, we want to deploy the new service, but **we don't want to make it available for users**, because the marketing team asked us to release it the next week. Gatekeeper helps us with this:
 
 ```php
 class CMSController extends Controller {
@@ -165,11 +165,11 @@ A really nice shortcut!
 
 ### Enable/Disable Features for Specific Users/Entities
 
-Even if the previous things we saw are useful, LaravelFeature **is not just about pushing the on/off button on a feature**. Sometimes, business necessities require more flexibility. Think about a [**Canary Release**](http://martinfowler.com/bliki/CanaryRelease.html): we want to rollout a feature only to specific users. Or, maybe, just for one tester user.
+Even if the previous things we saw are useful, Gatekeeper **is not just about pushing the on/off button on a feature**. Sometimes, business necessities require more flexibility. Think about a [**Canary Release**](http://martinfowler.com/bliki/CanaryRelease.html): we want to rollout a feature only to specific users. Or, maybe, just for one tester user.
 
 #### Enable Features Management for Specific Users
 
-LaravelFeature makes this possible, and also easier just as **adding a trait to our `User` class**.
+Gatekeeper makes this possible, and also easier just as **adding a trait to our `User` class**.
 
 In fact, all you need to do is to: 
 
@@ -186,13 +186,13 @@ class User extends Authenticatable implements FeaturableInterface
 ...
 ```
 
-Nothing more! LaravelGatekeeper now already knows what to do.
+Nothing more! Gatekeeper now already knows what to do.
 
 #### Status Priority
 
 *Please keep in mind that all you're going to read from now is not valid if a feature is already enabled globally. To activate a feature for specific users, you first need to disable it.*
 
-Laravel-Feature **first checks if the feature is enabled globally, then it goes down at entity-level**.
+Gatekeeper **first checks if the feature is enabled globally, then it goes down at entity-level**.
 
 #### Enable/Disable a Feature for a Specific User
 
@@ -389,7 +389,7 @@ If you discover any security related issues, please email philspil66@gmail.com i
 ## Credits
 
 * [Phil Spilsbury](https://github.com/philspil66)
-* [All Contributors](https://github.com/philspil66/laravel-gatekeeper/contributors)
+* [All Contributors](https://github.com/philspil66/gatekeeper/contributors)
 
 ## License
 
