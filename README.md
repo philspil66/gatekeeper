@@ -1,4 +1,4 @@
-# GatekeeperLaravel-Feature
+# Gatekeeper
 
 
 Gatekeeper is a package to manage feature flagging within a Laravel project.
