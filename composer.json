@@ -1,0 +1,56 @@
+{
+    "name": "philspil66/gatekeeper",
+    "type": "library",
+    "description": "A package to manage feature flagging within a Laravel project.",
+    "keywords": ["laravel", "feature", "flag"],
+    "homepage": "https://github.com/philspil66/gatekeeper",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Phil Spilsbury",
+            "email": "philspil66@gmail.com",
+            "homepage": "https://github.com/philspil66",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : "^7.1",
+        "illuminate/database": "^5.8|^6.0|^7.0",
+        "illuminate/support": "~5.6"
+    },
+    "require-dev": {
+        "mockery/mockery": "^0.9.4",
+        "orchestra/database": "^3.6",
+        "orchestra/testbench": "~3.6",
+        "phpunit/phpunit": "~7.0",
+        "squizlabs/php_codesniffer": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelFeature\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LaravelFeature\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src/Config src/Console src/Domain src/Facade src/Facade src/Featurable src/Model src/Provider src/Service",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src/Config src/Console src/Domain src/Facade src/Facade src/Featurable src/Model src/Provider src/Service"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelFeature\\Provider\\FeatureServiceProvider"
+            ],
+            "aliases": {
+                "Feature": "LaravelFeature\\Facade\\Feature"
+            }
+        }
+    }
+}
