@@ -27,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "LaravelFeature\\": "src"
+            "Gatekeeper\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "LaravelFeature\\Tests\\": "tests"
+            "Gatekeeper\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -46,10 +46,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "LaravelFeature\\Provider\\FeatureServiceProvider"
+                "Gatekeeper\\Provider\\FeatureServiceProvider"
             ],
             "aliases": {
-                "Feature": "LaravelFeature\\Facade\\Feature"
+                "Feature": "Gatekeeper\\Facade\\Feature"
             }
         }
     }
