@@ -5,7 +5,7 @@ namespace Gatekeeper\Facade;
 use Gatekeeper\Domain\FeatureManager;
 use Illuminate\Support\Facades\Facade;
 
-class Feature extends Facade
+class Gatekeeper extends Facade
 {
     /**
      * Get the registered name of the component.
