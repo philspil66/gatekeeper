@@ -12,7 +12,7 @@ class AddFeature extends Command
      *
      * @var string
      */
-    protected $signature = 'gatekeeper:add {feature}';
+    protected $signature = 'gatekeeper:add {feature}  {--state}';
 
     /**
      * The console command description.
@@ -40,12 +40,17 @@ class AddFeature extends Command
     public function handle()
     {
         $feature = $this->argument('feature');
+        $state = $this->argument('state');
 
         if (is_null($feature) || is_array($feature)) {
             throw new \ErrorException('Feature argument must be a string');
         }
 
-        Gatekeeper::add($feature);
+        if (is_null($state) || is_array($state)) {
+            $state = "0";
+        }
+
+        Gatekeeper::add($feature, $state);
 
         $this->line(
             sprintf(
