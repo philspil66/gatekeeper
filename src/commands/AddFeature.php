@@ -12,7 +12,7 @@ class AddFeature extends Command
      *
      * @var string
      */
-    protected $signature = 'gatekeeper:add {feature}  {--state}';
+    protected $signature = 'gatekeeper:add {feature}  {--state=}';
 
     /**
      * The console command description.
