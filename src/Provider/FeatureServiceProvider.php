@@ -6,6 +6,10 @@ use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Gatekeeper\Domain\Repository\FeatureRepositoryInterface;
 use Gatekeeper\Console\Command\ScanViewsForFeaturesCommand;
+use Gatekeeper\Commands\AddFeature;
+use Gatekeeper\Commands\RemoveFeature;
+use Gatekeeper\Commands\EnableFeature;
+use Gatekeeper\Commands\DisableFeature;
 
 class FeatureServiceProvider extends ServiceProvider
 {
@@ -23,6 +27,13 @@ class FeatureServiceProvider extends ServiceProvider
         ]);
 
         $this->registerBladeDirectives();
+
+        $this->commands([
+            AddFeature::class,
+            RemoveFeature::class,
+            EnableFeature::class,
+            DisableFeature::class,
+        ]);
     }
 
     /**
