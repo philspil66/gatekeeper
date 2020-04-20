@@ -5,7 +5,7 @@ namespace Gatekeeper\Commands;
 use Illuminate\Console\Command;
 use Gatekeeper\Facade\Gatekeeper;
 
-class DiscableFeature extends Command
+class DisableFeature extends Command
 {
     /**
      * The name and signature of the console command.
