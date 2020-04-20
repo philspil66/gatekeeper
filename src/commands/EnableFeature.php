@@ -49,7 +49,7 @@ class EnableFeature extends Command
 
         $this->line(
             sprintf(
-                'Feature `%s` has been turned on',
+                'Feature `%s` has been enabled',
                 $feature
             )
         );
