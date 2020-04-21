@@ -2,7 +2,7 @@
 
 Gatekeeper is a package to manage Feature Flagging within a Laravel project.
 
-It was inspired by the [AdEspresso Feature Flag Bundle](https://github.com/adespresso/FeatureBundle) andvarious other Laravel spin-offs.
+It was inspired by the [AdEspresso Feature Flag Bundle](https://github.com/adespresso/FeatureBundle) and various other Laravel sFeature Flag spin-offs.
 
 ## What is Feature Flagging?
 
