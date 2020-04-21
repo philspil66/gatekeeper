@@ -216,6 +216,23 @@ if(Gatekeeper::isEnabledFor('my.feature', $user)) {
     
 }
 ```
+### Artisan Commands
+
+You may run the following commands to add or remove features.
+
+```bash
+php artisan gatekeeper:add my-feature
+
+php artisan gatekeeper:remove my-feature
+```
+
+You may run the following commands to toggle the on or off state of the feature.
+
+```bash
+php artisan gatekeeper:enable my-feature
+
+php artisan gatekeeper:disable my-feature
+```
 
 #### Other Notes
 
