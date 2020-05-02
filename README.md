@@ -19,6 +19,10 @@ With Gatekeeper, you can:
 
 There are many things to know about feature toggling: take a look to [this great article](http://martinfowler.com/articles/feature-toggles.html) for more info. It's a really nice and useful lecture.
 
+## Compatibility
+
+Gatekeeper works with PHP 5.6 or above.
+
 ## Install
 
 You can install Gatekeeper with Composer.
