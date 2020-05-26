@@ -89,7 +89,7 @@ class EloquentFeatureRepository implements FeatureRepositoryInterface
         /** @var Model $model */
         $model = Model::where('name', '=', $featureName)->first();
         if (!$model) {
-            return null;
+            return false;
         }
 
         return ($model->is_enabled) ? true : $featurable->hasFeature($featureName);
