@@ -83,10 +83,6 @@ class FeatureManager
 
     public function isEnabledFor($featureName, FeaturableInterface $featurable)
     {
-        $feature = $this->repository->isEnabledFor($featureName, $featurable);
-        if (!$feature){
-            return false;
-        }
-        return $feature->isEnabled();
+        return $this->repository->isEnabledFor($featureName, $featurable);
     }
 }
