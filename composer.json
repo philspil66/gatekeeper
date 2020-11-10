@@ -2,7 +2,11 @@
     "name": "philspil66/gatekeeper",
     "type": "library",
     "description": "A package to manage feature flagging within a Laravel project.",
-    "keywords": ["laravel", "feature", "flag"],
+    "keywords": [
+        "laravel",
+        "feature",
+        "flag"
+    ],
     "homepage": "https://github.com/philspil66/gatekeeper",
     "license": "MIT",
     "authors": [
@@ -14,8 +18,8 @@
         }
     ],
     "require": {
-        "php" : "^7.1",
-        "illuminate/database": "^5.8|^6.0|^7.0",
+        "php": "^7.1",
+        "illuminate/database": "^5.8|^6.0|^7.0|^8.0",
         "illuminate/support": "^5.6|^6.0|^7.0|^8.0"
     },
     "require-dev": {
